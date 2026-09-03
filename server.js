@@ -123,7 +123,7 @@ async function fetchAlbumInfo(url) {
       title,
       storeName,
       inStock: !isOutOfStock,
-      lastCheck: new Date().toLocaleTimeString('zh-TW')
+      lastCheck: new Date().toLocaleString('zh-TW', { timeZone: 'Asia/Taipei' })
     };
   } catch (error) {
     console.error(`[解析失敗] ${url}:`, error.message);
